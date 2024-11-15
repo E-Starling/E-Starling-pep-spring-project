@@ -79,7 +79,7 @@ public class MessageService {
     // Retrieve All Messages By Account
     public List<Message> getMessagesByAccountId(Integer accountId) {
         List<Message> messages = messageRepository.findByPostedBy(accountId);
-
+        
         // if no messages are found return an empty list
         return messages != null ? messages : new ArrayList<>();
     }
